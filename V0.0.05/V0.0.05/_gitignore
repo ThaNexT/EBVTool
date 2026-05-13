@@ -1,0 +1,47 @@
+# EBV Classification Tool - Git Ignore Rules
+
+# -------------------------------------------------------------------
+# 1. Lokale Verzeichnisse ignorieren (Daten- & Kundenschutz)
+# -------------------------------------------------------------------
+# Ignoriert den kompletten Inhalt dieser Ordner...
+0_input/*
+1_validation/*
+2_output/*
+
+# ... ABER behält die Ordnerstruktur im Repository (mittels Dummy-Datei)
+!0_input/.gitkeep
+!1_validation/.gitkeep
+!2_output/.gitkeep
+
+# -------------------------------------------------------------------
+# 2. Python spezifische Dateien ignorieren
+# -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtuelle Umgebungen
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints
+
+# pytest Cache
+.pytest_cache/
+
+# -------------------------------------------------------------------
+# 3. Betriebssystem spezifische Dateien ignorieren
+# -------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride

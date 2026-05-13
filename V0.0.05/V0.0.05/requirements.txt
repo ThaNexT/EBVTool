@@ -1,0 +1,6 @@
+openpyxl==3.1.5
+pandas==3.0.2
+pdfplumber==0.11.9
+pytest==9.0.3
+reportlab==4.4.10
+thefuzz==0.22.1

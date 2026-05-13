@@ -1,0 +1,35 @@
+# ---- Generated outputs (recreated on every run) ----
+V0.0.06/1_validation/*
+V0.0.06/2_output/*
+V0.0.05/V0.0.05/1_validation/*
+V0.0.05/V0.0.05/2_output/*
+
+# ---- Confidential / heavy lab input — never push to GitHub ----
+V0.0.06/0_input/EBV/*
+V0.0.06/0_input/PAK/*
+V0.0.06/0_input/Aggressivität/*
+V0.0.05/V0.0.05/0_input/EBV/*
+V0.0.05/V0.0.05/0_input/PAK/*
+V0.0.05/V0.0.05/0_input/Aggressivität/*
+
+# ---- Heavy / proprietary templates (distributed out-of-band) ----
+V0.0.06/templates/2604XX_Mantelverordnung.xlsx
+V0.0.06/templates/2604XX_Rohdaten & Aggressivität.xlsx
+V0.0.06/templates/A_4_3_1_Auswertung_Labor.pdf
+V0.0.05/V0.0.05/2604XX_Mantelverordnung.xlsx
+V0.0.05/V0.0.05/2604XX_Rohdaten & Aggressivität.xlsx
+V0.0.05/V0.0.05/A_4_3_1_Auswertung_Labor.pdf
+
+# ---- Keep .gitkeep files anywhere so empty folders persist ----
+!.gitkeep
+
+# ---- Python / Office / editor noise ----
+__pycache__/
+*.pyc
+*.tmp
+~$*
+.~lock.*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

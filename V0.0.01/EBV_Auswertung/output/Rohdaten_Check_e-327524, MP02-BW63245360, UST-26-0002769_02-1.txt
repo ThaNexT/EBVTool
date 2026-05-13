@@ -1,0 +1,30 @@
+--- ROHDATEN CHECK FÜR: e-327524, MP02-BW63245360, UST-26-0002769_02-1.pdf ---
+Gelesene Parameter-Zeilen gesamt: 27
+------------------------------------------------------------
+Labor: TOC                                 | EBV: TOC                                 | Ausgelesen:  nan % TS
+Labor: EOX                                 | EBV: EOX                                 | Ausgelesen: < 0.5 mg/kg
+Labor: Kohlenwasserstoffe C10 - C22        | EBV: Kohlenwasserstoffe (C10-C22)        | Ausgelesen: < 50.0 mg/kg
+Labor: Kohlenwasserstoffe C10 - C40        | EBV: Kohlenwasserstoffe (C10-C40)        | Ausgelesen:  860.0 mg/kg
+Labor: Naphthalin                          | EBV: Naphthalin und Methylnaphthaline, gesamt | Ausgelesen: < 0.05 mg/kg
+Labor: Arsen                               | EBV: Arsen                               | Ausgelesen:  7.3 mg/kg
+Labor: Blei                                | EBV: Blei                                | Ausgelesen:  4.2 mg/kg
+Labor: Cadmium                             | EBV: Cadmium                             | Ausgelesen: < 0.3 mg/kg
+Labor: Chrom (Gesamt)                      | EBV: Chrom, gesamt                       | Ausgelesen:  9.3 mg/kg
+Labor: Kupfer                              | EBV: Kupfer                              | Ausgelesen:  5.3 mg/kg
+Labor: Nickel                              | EBV: Nickel                              | Ausgelesen:  13.0 mg/kg
+Labor: Quecksilber                         | EBV: Quecksilber                         | Ausgelesen: < 0.05 mg/kg
+Labor: Thallium                            | EBV: Thallium                            | Ausgelesen: < 0.25 mg/kg
+Labor: Zink                                | EBV: Zink                                | Ausgelesen:  17.0 mg/kg
+Labor: pH-Wert                             | EBV: pH-Wert                             | Ausgelesen:  8.0 --
+Labor: elektrische Leitfhigkeit bei S      | EBV: Elektrische Leitfähigkeit           | Ausgelesen:  188.0 /cm
+Labor: Sulfat                              | EBV: Sulfat                              | Ausgelesen:  13.0 mg/l
+Labor: Naphthalin                          | EBV: Naphthalin und Methylnaphthaline, gesamt | Ausgelesen: < 0.05 g/l
+Labor: Arsen                               | EBV: Arsen                               | Ausgelesen:  0.002 mg/l
+Labor: Blei                                | EBV: Blei                                | Ausgelesen: < 0.001 mg/l
+Labor: Cadmium                             | EBV: Cadmium                             | Ausgelesen: < 0.0001 mg/l
+Labor: Chrom (Gesamt)                      | EBV: Chrom, gesamt                       | Ausgelesen:  0.002 mg/l
+Labor: Kupfer                              | EBV: Kupfer                              | Ausgelesen:  0.002 mg/l
+Labor: Nickel                              | EBV: Nickel                              | Ausgelesen: < 0.001 mg/l
+Labor: Quecksilber                         | EBV: Quecksilber                         | Ausgelesen:  3e-05 mg/l
+Labor: Thallium                            | EBV: Thallium                            | Ausgelesen: < 0.0002 mg/l
+Labor: Zink                                | EBV: Zink                                | Ausgelesen:  0.049 mg/l

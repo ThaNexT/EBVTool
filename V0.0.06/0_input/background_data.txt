@@ -1,0 +1,46 @@
+-DATA-
+Projektnummer	e-327524
+Bauvorhaben	Feldwegbrücke bei Distelhausen
+LOS		1
+Bauwerk		6324 536 0
+
+
+-SAMPLE-
+Name
+MP01-BW63245360 
+Asp03-BW63245360
+MP02-BW63245360
+MP03-BW63245360
+MP04-BW63245360
+MP05-BW63245360
+6324-536-GWM2
+
+Art
+Straßenaufbruch
+Straßenaufbruch
+Auffüllung
+Auffüllung
+Auffüllung
+Auffüllung
+Grundwasser
+
+Stratigraphie
+qhy
+qhy
+qhy
+qhy
+qhy
+qhy
+-
+
+type (Sand/Lehm/Ton/Wasser)
+undef
+undef
+undef
+undef
+undef
+undef
+Wasser
+
+Petrographische Beschreibung
+Auffüllung

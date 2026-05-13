@@ -1,0 +1,110 @@
+from typing import List, Dict, Union, Any
+
+# Metadata for the EBV (Ersatzbaustoffverordnung) verification
+EBV_VERSION: Dict[str, str] = {
+    "law": "Ersatzbaustoffverordnung (EBV)",
+    "reference": "BGBl. I 2021 S. 2598",
+    "table": "Appendix 1 Table 3",
+    "valid_from": "2023-08-01",
+    "verified_on": "2026-04-09",
+    "verified_by": "Automated Parser"
+}
+
+# Soil type mapping for the validation excel input
+SOIL_TYPE_MAPPING: Dict[str, str] = {
+    "undef": "BM_0_Sand",
+    "s": "BM_0_Sand",
+    "sand": "BM_0_Sand",
+    "l": "BM_0_Lehm_Schluff",
+    "loam": "BM_0_Lehm_Schluff",
+    "silt": "BM_0_Lehm_Schluff",
+    "lehm": "BM_0_Lehm_Schluff",
+    "schluff": "BM_0_Lehm_Schluff",
+    "c": "BM_0_Ton",
+    "clay": "BM_0_Ton",
+    "ton": "BM_0_Ton"
+}
+
+CLASS_HIERARCHY: List[str] = [
+    "BM_0_Sand", "BM_0_Lehm_Schluff", "BM_0_Ton", 
+    "BM_0*", "BM_F0*", "BM_F1", "BM_F2", "BM_F3"
+]
+
+# Core EBV limits database (Legal strings kept in German)
+ebv_tabelle_3: List[Dict[str, Any]] = [
+    {"ebv_order": 1, "parameter": "Mineralische Fremdbestandteile", "einheit": "Vol.-%", "typ": "Feststoff", "fussnoten": [1], "grenzwerte": {"BM_0_Sand": 10, "BM_0_Lehm_Schluff": 10, "BM_0_Ton": 10, "BM_0*": 10, "BM_F0*": 50, "BM_F1": 50, "BM_F2": 50, "BM_F3": 50}},
+    {"ebv_order": 2, "parameter": "pH-Wert", "einheit": "-", "typ": "Eluat", "fussnoten": [4], "grenzwerte": {"BM_0_Sand": [6.5, 9.5], "BM_0_Lehm_Schluff": [6.5, 9.5], "BM_0_Ton": [6.5, 9.5], "BM_0*": [6.5, 9.5], "BM_F0*": [6.5, 9.5], "BM_F1": [6.5, 9.5], "BM_F2": [6.5, 9.5], "BM_F3": [5.5, 12.0]}},
+    {"ebv_order": 3, "parameter": "Elektrische Leitfähigkeit", "einheit": "µS/cm", "typ": "Eluat", "fussnoten": [4], "grenzwerte": {"BM_0*": 350, "BM_F0*": 350, "BM_F1": 500, "BM_F2": 500, "BM_F3": 2000}},
+    {"ebv_order": 4, "parameter": "Sulfat", "einheit": "mg/l", "typ": "Eluat", "fussnoten": [5], "grenzwerte": {"BM_0_Sand": 250, "BM_0_Lehm_Schluff": 250, "BM_0_Ton": 250, "BM_0*": 250, "BM_F0*": 250, "BM_F1": 450, "BM_F2": 450, "BM_F3": 1000}},
+    {"ebv_order": 5, "parameter": "Arsen", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 10, "BM_0_Lehm_Schluff": 20, "BM_0_Ton": 20, "BM_0*": 20, "BM_F0*": 40, "BM_F1": 40, "BM_F2": 40, "BM_F3": 150}},
+    {"ebv_order": 6, "parameter": "Arsen", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [3], "grenzwerte": {"BM_0*": {"standard": 8, "klammerwert": 13}, "BM_F0*": 12, "BM_F1": 20, "BM_F2": 85, "BM_F3": 100}},
+    {"ebv_order": 7, "parameter": "Blei", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 40, "BM_0_Lehm_Schluff": 70, "BM_0_Ton": 100, "BM_0*": 140, "BM_F0*": 140, "BM_F1": 140, "BM_F2": 140, "BM_F3": 700}},
+    {"ebv_order": 8, "parameter": "Blei", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [3], "grenzwerte": {"BM_0*": {"standard": 23, "klammerwert": 43}, "BM_F0*": 35, "BM_F1": 90, "BM_F2": 250, "BM_F3": 470}},
+    {"ebv_order": 9, "parameter": "Cadmium", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [6], "grenzwerte": {"BM_0_Sand": 0.4, "BM_0_Lehm_Schluff": 1.0, "BM_0_Ton": 1.5, "BM_0*": 1.0, "BM_F0*": 2.0, "BM_F1": 2.0, "BM_F2": 2.0, "BM_F3": 10}},
+    {"ebv_order": 10, "parameter": "Cadmium", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [3], "grenzwerte": {"BM_0*": {"standard": 2, "klammerwert": 4}, "BM_F0*": 3.0, "BM_F1": 3.0, "BM_F2": 10, "BM_F3": 15}},
+    {"ebv_order": 11, "parameter": "Chrom, gesamt", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 30, "BM_0_Lehm_Schluff": 60, "BM_0_Ton": 100, "BM_0*": 120, "BM_F0*": 120, "BM_F1": 120, "BM_F2": 120, "BM_F3": 600}},
+    {"ebv_order": 12, "parameter": "Chrom, gesamt", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [3], "grenzwerte": {"BM_0*": {"standard": 10, "klammerwert": 19}, "BM_F0*": 15, "BM_F1": 150, "BM_F2": 290, "BM_F3": 530}},
+    {"ebv_order": 13, "parameter": "Kupfer", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 20, "BM_0_Lehm_Schluff": 40, "BM_0_Ton": 60, "BM_0*": 80, "BM_F0*": 80, "BM_F1": 80, "BM_F2": 80, "BM_F3": 320}},
+    {"ebv_order": 14, "parameter": "Kupfer", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [3], "grenzwerte": {"BM_0*": {"standard": 20, "klammerwert": 41}, "BM_F0*": 30, "BM_F1": 110, "BM_F2": 170, "BM_F3": 320}},
+    {"ebv_order": 15, "parameter": "Nickel", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 15, "BM_0_Lehm_Schluff": 50, "BM_0_Ton": 70, "BM_0*": 100, "BM_F0*": 100, "BM_F1": 100, "BM_F2": 100, "BM_F3": 350}},
+    {"ebv_order": 16, "parameter": "Nickel", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [3], "grenzwerte": {"BM_0*": {"standard": 20, "klammerwert": 31}, "BM_F0*": 30, "BM_F1": 30, "BM_F2": 150, "BM_F3": 280}},
+    {"ebv_order": 17, "parameter": "Quecksilber", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 0.2, "BM_0_Lehm_Schluff": 0.3, "BM_0_Ton": 0.3, "BM_0*": 0.6, "BM_F0*": 0.6, "BM_F1": 0.6, "BM_F2": 0.6, "BM_F3": 5}},
+    {"ebv_order": 18, "parameter": "Quecksilber", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [12], "grenzwerte": {"BM_0*": 0.1}},
+    {"ebv_order": 19, "parameter": "Thallium", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 0.5, "BM_0_Lehm_Schluff": 1.0, "BM_0_Ton": 1.0, "BM_0*": 1.0, "BM_F0*": 2, "BM_F1": 2, "BM_F2": 2, "BM_F3": 7}},
+    {"ebv_order": 20, "parameter": "Thallium", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [12], "grenzwerte": {"BM_0*": {"standard": 0.2, "klammerwert": 0.3}}},
+    {"ebv_order": 21, "parameter": "Zink", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 60, "BM_0_Lehm_Schluff": 150, "BM_0_Ton": 200, "BM_0*": 300, "BM_F0*": 300, "BM_F1": 300, "BM_F2": 300, "BM_F3": 1200}},
+    {"ebv_order": 22, "parameter": "Zink", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [3], "grenzwerte": {"BM_0*": {"standard": 100, "klammerwert": 210}, "BM_F0*": 150, "BM_F1": 160, "BM_F2": 840, "BM_F3": 1600}},
+    {"ebv_order": 23, "parameter": "TOC", "einheit": "M%", "typ": "Feststoff", "fussnoten": [7], "grenzwerte": {"BM_0_Sand": 1, "BM_0_Lehm_Schluff": 1, "BM_0_Ton": 1, "BM_0*": 1, "BM_F0*": 5, "BM_F1": 5, "BM_F2": 5, "BM_F3": 5}},
+    {"ebv_order": 24, "parameter": "Kohlenwasserstoffe (C10-C22)", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [8], "grenzwerte": {"BM_0_Sand": 300, "BM_0_Lehm_Schluff": 300, "BM_0_Ton": 300, "BM_0*": 300, "BM_F0*": 300, "BM_F1": 300, "BM_F2": 300, "BM_F3": 1000}},
+    {"ebv_order": 25, "parameter": "Kohlenwasserstoffe (C10-C40)", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [8], "grenzwerte": {"BM_0_Sand": 600, "BM_0_Lehm_Schluff": 600, "BM_0_Ton": 600, "BM_0*": 600, "BM_F0*": 600, "BM_F1": 600, "BM_F2": 600, "BM_F3": 2000}},
+    {"ebv_order": 26, "parameter": "Benzo(a)pyren", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 0.3, "BM_0_Lehm_Schluff": 0.3, "BM_0_Ton": 0.3, "BM_0*": 0.6, "BM_F0*": 0.6, "BM_F1": 0.6, "BM_F2": 1.0, "BM_F3": 1.0}},
+    {"ebv_order": 27, "parameter": "PAK15", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [9], "grenzwerte": {"BM_0*": 0.2, "BM_F0*": 0.3, "BM_F1": 1.5, "BM_F2": 3.8, "BM_F3": 20}},
+    {"ebv_order": 28, "parameter": "PAK16", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [10], "grenzwerte": {"BM_0_Sand": 3, "BM_0_Lehm_Schluff": 3, "BM_0_Ton": 3, "BM_0*": 6, "BM_F0*": 6, "BM_F1": 6, "BM_F2": 9, "BM_F3": 30}},
+    {"ebv_order": 29, "parameter": "Naphthalin und Methylnaphthaline, gesamt", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [3], "grenzwerte": {"BM_0*": 2}},
+    {"ebv_order": 30, "parameter": "PCB6 und PCB-118", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [], "grenzwerte": {"BM_0_Sand": 0.05, "BM_0_Lehm_Schluff": 0.05, "BM_0_Ton": 0.05, "BM_0*": 0.1}},
+    {"ebv_order": 31, "parameter": "PCB6 und PCB-118", "einheit": "µg/l", "typ": "Eluat", "fussnoten": [], "grenzwerte": {"BM_0*": 0.01}},
+    {"ebv_order": 32, "parameter": "EOX", "einheit": "mg/kg", "typ": "Feststoff", "fussnoten": [11], "grenzwerte": {"BM_0_Sand": 1, "BM_0_Lehm_Schluff": 1, "BM_0_Ton": 1, "BM_0*": 1}}
+]
+
+# Fuzzy matching synonyms to handle lab report variations
+SYNONYM_MAPPING: Dict[str, str] = {
+    "leitfähigkeit": "Elektrische Leitfähigkeit",
+    "lf": "Elektrische Leitfähigkeit",
+    "elektrische leitfähigkeit bei 25°c": "Elektrische Leitfähigkeit",
+    "elektrische leitfähigkeit bei 25 °c": "Elektrische Leitfähigkeit",
+    "elektrische leitfähigkeit bei s": "Elektrische Leitfähigkeit",
+    "pak nach epa": "PAK16",
+    "pak (16)": "PAK16",
+    "summe pak (16 epa)": "PAK16",
+    "summe pak 16": "PAK16",
+    "summe pak 16 ebv": "PAK16",
+    "summe pak 16 nach ebv": "PAK16",
+    "summe pak (16) nach ebv": "PAK16",
+    "summe pak nach epa": "PAK16",
+    "summe der pak": "PAK16",
+    "polycyclische aromatische kohlenwasserstoffe (pak16)": "PAK16",
+    "pak 16 (epa)": "PAK16",
+    "summe pak 15": "PAK15",
+    "summe pak 15 ebv": "PAK15",
+    "summe pak 15 nach ebv": "PAK15",
+    "summe pak (15) nach ebv": "PAK15",
+    "benzo(a)pyren": "Benzo(a)pyren",
+    "benzo[a]pyren": "Benzo(a)pyren",
+    "benzo(a)pyren ebv": "Benzo(a)pyren",
+    "kohlenwasserstoffe c10 - c22": "Kohlenwasserstoffe (C10-C22)",
+    "kohlenwasserstoffe c10 - c40": "Kohlenwasserstoffe (C10-C40)",
+    "kw-index": "Kohlenwasserstoffe (C10-C40)",
+    "ph": "pH-Wert",
+    "ph-wert": "pH-Wert",
+    "chrom": "Chrom, gesamt",
+    "chrom (gesamt)": "Chrom, gesamt",
+    "toc": "TOC",
+    "naphthalin und methylnaphthaline": "Naphthalin und Methylnaphthaline, gesamt",
+    "summe naphthalin und methylnaphthaline": "Naphthalin und Methylnaphthaline, gesamt",
+    "summe naphthaline (ebv)": "Naphthalin und Methylnaphthaline, gesamt",
+    "summe naphthaline nach ebv": "Naphthalin und Methylnaphthaline, gesamt",
+    "pcb": "PCB6 und PCB-118",
+    "summe pcb": "PCB6 und PCB-118",
+    "summe pcb nach ebv": "PCB6 und PCB-118",
+    "summe pcb ebv": "PCB6 und PCB-118"
+}

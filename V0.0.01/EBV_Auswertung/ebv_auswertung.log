@@ -1,0 +1,138 @@
+2026-04-08 14:55:52,438 [INFO] Starte automatisierte EBV-Auswertung...
+2026-04-08 14:55:52,439 [INFO] Referenz-Bodenart: BM_0_Sand, TOC: 0.1%
+2026-04-08 14:55:52,439 [INFO] Verarbeite Datei: e-327524, MP02-BW63245360, UST-26-0002769_02-1.pdf
+2026-04-08 14:55:53,129 [WARNING] Fuzzy-Match: 'EOX' -> 'EOX' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,130 [WARNING] Fuzzy-Match: 'Kohlenwasserstoffe C10 - C22' -> 'Kohlenwasserstoffe' (Score: 90). Bitte prüfen!
+2026-04-08 14:55:53,311 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,311 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,313 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,314 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,314 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,314 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,314 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,315 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,315 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,544 [WARNING] Fuzzy-Match: 'pH-Wert' -> 'pH-Wert' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,545 [WARNING] Fuzzy-Match: 'elektrische Leitfhigkeit bei S' -> 'Elektrische Leitfähigkeit' (Score: 95). Bitte prüfen!
+2026-04-08 14:55:53,545 [WARNING] Fuzzy-Match: 'Sulfat' -> 'Sulfat' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,792 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,793 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,793 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,793 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,793 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,794 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,794 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,794 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 14:55:53,794 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:17,546 [INFO] Starte automatisierte EBV-Auswertung...
+2026-04-08 15:02:17,547 [INFO] Referenz-Bodenart: BM_0_Sand, TOC: 0.1%
+2026-04-08 15:02:17,547 [INFO] Verarbeite Datei: e-327524, MP02-BW63245360, UST-26-0002769_02-1.pdf
+2026-04-08 15:02:18,244 [WARNING] Fuzzy-Match: 'EOX' -> 'EOX' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,245 [WARNING] Fuzzy-Match: 'Kohlenwasserstoffe C10 - C22' -> 'Kohlenwasserstoffe' (Score: 90). Bitte prüfen!
+2026-04-08 15:02:18,429 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,429 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,429 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,430 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,430 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,430 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,430 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,430 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,430 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,661 [WARNING] Fuzzy-Match: 'pH-Wert' -> 'pH-Wert' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,662 [WARNING] Fuzzy-Match: 'elektrische Leitfhigkeit bei S' -> 'Elektrische Leitfähigkeit' (Score: 95). Bitte prüfen!
+2026-04-08 15:02:18,662 [WARNING] Fuzzy-Match: 'Sulfat' -> 'Sulfat' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,912 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,913 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,913 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,914 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,914 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,914 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,914 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,914 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:18,915 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 15:02:19,012 [INFO] Excel-Bericht gespeichert: output\Klassifizierung_e-327524, MP02-BW63245360, UST-26-0002769_02-1.xlsx
+2026-04-08 15:02:19,012 [INFO] Verarbeitung aller Dateien abgeschlossen.
+2026-04-08 15:09:23,761 [INFO] Starte automatisierte EBV-Auswertung...
+2026-04-08 15:09:23,761 [INFO] Referenz-Bodenart: BM_0_Sand, TOC: 0.1%
+2026-04-08 15:09:23,762 [INFO] Verarbeite Datei: e-327524, MP02-BW63245360, UST-26-0002769_02-1.pdf
+2026-04-08 15:09:24,450 [WARNING] Fuzzy-Match: 'EOX' -> 'EOX' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,451 [WARNING] Fuzzy-Match: 'Kohlenwasserstoffe C10 - C22' -> 'Kohlenwasserstoffe' (Score: 90). Bitte prüfen!
+2026-04-08 15:09:24,629 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,629 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,630 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,630 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,630 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,631 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,631 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,632 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,632 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,859 [WARNING] Fuzzy-Match: 'pH-Wert' -> 'pH-Wert' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:24,859 [WARNING] Fuzzy-Match: 'elektrische Leitfhigkeit bei S' -> 'Elektrische Leitfähigkeit' (Score: 95). Bitte prüfen!
+2026-04-08 15:09:24,860 [WARNING] Fuzzy-Match: 'Sulfat' -> 'Sulfat' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,102 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,102 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,103 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,103 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,104 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,104 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,104 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,104 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,105 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 15:09:25,207 [INFO] Excel-Bericht gespeichert: output\Klassifizierung_e-327524, MP02-BW63245360, UST-26-0002769_02-1.xlsx
+2026-04-08 15:09:25,208 [INFO] Verarbeitung aller Dateien abgeschlossen.
+2026-04-08 15:17:44,229 [INFO] Starte automatisierte EBV-Auswertung...
+2026-04-08 15:17:44,230 [INFO] Referenz-Bodenart: BM_0_Sand, TOC: 0.1%
+2026-04-08 15:17:44,230 [INFO] Verarbeite Datei: e-327524, MP02-BW63245360, UST-26-0002769_02-1.pdf
+2026-04-08 15:17:44,941 [WARNING] Fuzzy-Match: 'EOX' -> 'EOX' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:44,942 [WARNING] Fuzzy-Match: 'Kohlenwasserstoffe C10 - C22' -> 'Kohlenwasserstoffe' (Score: 90). Bitte prüfen!
+2026-04-08 15:17:45,122 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,122 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,123 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,123 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,123 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,123 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,124 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,124 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,124 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,350 [WARNING] Fuzzy-Match: 'pH-Wert' -> 'pH-Wert' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,350 [WARNING] Fuzzy-Match: 'elektrische Leitfhigkeit bei S' -> 'Elektrische Leitfähigkeit' (Score: 95). Bitte prüfen!
+2026-04-08 15:17:45,351 [WARNING] Fuzzy-Match: 'Sulfat' -> 'Sulfat' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,597 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,598 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,598 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,598 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,599 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,599 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,599 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,599 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,599 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 15:17:45,723 [INFO] Excel-Bericht gespeichert: output\Klassifizierung_e-327524, MP02-BW63245360, UST-26-0002769_02-1.xlsx
+2026-04-08 15:17:45,724 [INFO] Verarbeitung aller Dateien abgeschlossen.
+2026-04-08 15:29:52,219 [INFO] Starte automatisierte EBV-Auswertung...
+2026-04-08 15:29:52,220 [INFO] Referenz-Bodenart: BM_0_Sand, TOC: 0.1%
+2026-04-08 15:29:52,220 [INFO] Verarbeite Datei: e-327524, MP02-BW63245360, UST-26-0002769_02-1.pdf
+2026-04-08 15:29:52,921 [WARNING] Fuzzy-Match: 'EOX' -> 'EOX' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,104 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,104 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,105 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,105 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,105 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,106 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,106 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,106 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,107 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,333 [WARNING] Fuzzy-Match: 'pH-Wert' -> 'pH-Wert' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,333 [WARNING] Fuzzy-Match: 'elektrische Leitfhigkeit bei S' -> 'Elektrische Leitfähigkeit' (Score: 95). Bitte prüfen!
+2026-04-08 15:29:53,333 [WARNING] Fuzzy-Match: 'Sulfat' -> 'Sulfat' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,585 [WARNING] Fuzzy-Match: 'Arsen' -> 'Arsen' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,586 [WARNING] Fuzzy-Match: 'Blei' -> 'Blei' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,586 [WARNING] Fuzzy-Match: 'Cadmium' -> 'Cadmium' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,586 [WARNING] Fuzzy-Match: 'Chrom (Gesamt)' -> 'Chrom, gesamt' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,587 [WARNING] Fuzzy-Match: 'Kupfer' -> 'Kupfer' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,587 [WARNING] Fuzzy-Match: 'Nickel' -> 'Nickel' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,587 [WARNING] Fuzzy-Match: 'Quecksilber' -> 'Quecksilber' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,587 [WARNING] Fuzzy-Match: 'Thallium' -> 'Thallium' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,587 [WARNING] Fuzzy-Match: 'Zink' -> 'Zink' (Score: 100). Bitte prüfen!
+2026-04-08 15:29:53,593 [INFO] Rohdaten-Checkdatei gespeichert: output\Rohdaten_Check_e-327524, MP02-BW63245360, UST-26-0002769_02-1.txt
+2026-04-08 15:29:53,720 [INFO] Excel-Bericht gespeichert: output\Klassifizierung_e-327524, MP02-BW63245360, UST-26-0002769_02-1.xlsx
+2026-04-08 15:29:53,721 [INFO] Verarbeitung aller Dateien abgeschlossen.
