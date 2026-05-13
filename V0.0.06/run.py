@@ -50,47 +50,16 @@ def _slug(text: str) -> str:
 
 
 def _bundle_folder_name(input_root: str = "0_input") -> str:
-    """Derive a 'BW<bauwerk>_<short>' folder name from background_data.txt.
+    """Folder name for the drag-and-drop deliverable subfolder.
 
-    Falls back to the literal ``"Bundle"`` if metadata is missing.
+    Fixed literal ``"bundled"`` — the timestamped parent
+    (``2_output/<ts>_Evaluation/``) already disambiguates runs, and the user
+    renames the subfolder per Bauwerk after upload to Drive. ``input_root``
+    is kept in the signature for backwards compatibility with earlier
+    callers that may still pass it.
     """
-    path = os.path.join(input_root, "background_data.txt")
-    if not os.path.exists(path):
-        return "Bundle"
-
-    bauwerk = ""
-    bauvorhaben = ""
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            for raw in f:
-                line = raw.rstrip("\n")
-                if not line.strip() or line.lstrip().startswith("-"):
-                    continue
-                parts = line.split(None, 1)
-                if len(parts) < 2:
-                    continue
-                key, val = parts[0], parts[1].strip()
-                if key.lower() == "bauwerk":
-                    bauwerk = val
-                elif key.lower() == "bauvorhaben":
-                    bauvorhaben = val
-                if bauwerk and bauvorhaben:
-                    break
-    except OSError:
-        return "Bundle"
-
-    bw_slug = _slug(bauwerk.replace(" ", "-")) if bauwerk else ""
-    short = ""
-    if bauvorhaben:
-        skip = {"über", "ueber", "ueber.", "ü.", "bei", "an", "auf"}
-        tokens = [t for t in bauvorhaben.split() if t.lower() not in skip]
-        short = _slug("_".join(tokens[-2:]) if len(tokens) >= 2 else (tokens[-1] if tokens else ""))
-
-    if bw_slug and short:
-        return f"BW{bw_slug}_{short}"
-    if bw_slug:
-        return f"BW{bw_slug}"
-    return "Bundle"
+    del input_root  # unused, kept for signature stability
+    return "bundled"
 
 
 def _latest_dir(root: str, suffix: str) -> Optional[str]:

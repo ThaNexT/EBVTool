@@ -1317,11 +1317,30 @@ def _write_unified_validation(
                 i += 1
             used_titles.add(unique)
             ws = wb.create_sheet(title=unique)
+            # Strip ASCII control chars (\x00-\x08, \x0b-\x0c, \x0e-\x1f) from
+            # any string cell — PDF text extraction occasionally yields these
+            # and openpyxl rejects them with IllegalCharacterError. Keep \t,
+            # \n, \r since they are valid in cells.
+            _ctrl_re = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f]")
             for r in dataframe_to_rows(df, index=False, header=True):
-                ws.append(r)
+                cleaned = [
+                    _ctrl_re.sub("", v) if isinstance(v, str) else v
+                    for v in r
+                ]
+                ws.append(cleaned)
 
     xlsx_path = os.path.join(session_dir, "Validation.xlsx")
     wb.save(xlsx_path)
+
+    # Augment each Aggr_<sample> sheet with the DIN 4030 + DIN 50929
+    # calculations so the user can manually verify the classification.
+    try:
+        from aggr_validation_writer import augment_validation as _aug
+        n = _aug(xlsx_path)
+        if n > 0:
+            print(f"  Aggr-Berechnungen ergänzt in {n} Validierungssheet(s).")
+    except Exception as _exc:
+        print(f"  WARN: Aggr-Berechnung konnte nicht angehängt werden: {_exc}")
 
     # HTML preview — concatenate per-sample tables for human review
     html_path = os.path.join(session_dir, "Validation.html")
