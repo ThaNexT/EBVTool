@@ -34,7 +34,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import pandas as pd
 from openpyxl import Workbook, load_workbook
 from openpyxl.cell.cell import MergedCell
-from openpyxl.styles import Alignment, Font, PatternFill
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.utils.dataframe import dataframe_to_rows
 from openpyxl.worksheet.worksheet import Worksheet
@@ -1504,6 +1504,19 @@ def _populate_zusammenfassung(
         o_cell.alignment = Alignment(horizontal="left", vertical="center", wrap_text=True)
         o_cell.font = Font(size=9)
 
+    # Apply a thin black border to every cell A..O of this sample row.
+    # The template skeleton ships borders only on rows 41-44; samples
+    # beyond the 4th (e.g. MP07 on a 5-sample run) otherwise render with
+    # no borders and look misaligned. Replicating the template's row-41
+    # border style (thin, FF000000) keeps every sample row consistent
+    # regardless of how many samples a Bauwerk has.
+    _thin_black = Side(style="thin", color="FF000000")
+    _row_border = Border(left=_thin_black, right=_thin_black, top=_thin_black, bottom=_thin_black)
+    for col_letter in ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O"):
+        cell = ws[f"{col_letter}{row_idx}"]
+        if _is_writable(cell):
+            cell.border = _row_border
+
 
 
 
@@ -1747,5 +1760,6 @@ def create_combined_report(
         sample_meta_map=smm,
         bodenart_internal=bodenart,
         skeleton_path=skel,
+        keep_intermediate_xlsx=True,
     )
     print(f"  -> REPORTS GENERATED IN: {output_dir}")

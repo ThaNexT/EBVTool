@@ -143,16 +143,25 @@ def evaluate_sample(df: pd.DataFrame, bodenart: str = "BM_0_Sand", toc_override:
                 pass
 
                 # FN9 cap: PAK15 Eluat alone cannot push the sample beyond
-                # BM-F0*. The F1/F2/F3 PAK15 Eluat thresholds in Anlage 1
-                # Tab. 3 are informational (they describe the Eluat that
-                # corresponds to Feststoff-driven BM-F class); the actual
-                # class escalation comes from PAK16 Feststoff. So when
-                # PAK15 Eluat is Eluat-decisive, cap at BM-F0*.
+                # BM-F0* ONLY when the parent Feststoff (PAK16) is still in
+                # BM-0. Per EBV Anlage 1 Tab. 3 FN3 sentence 2: "Der
+                # Eluatwert für PAK15 ... ist maßgeblich, wenn der Feststoff-
+                # wert für PAK16 nach Spalte 3 bis 5 überschritten wird."
+                # i.e. when Feststoff PAK16 is already in BM-F1/F2/F3, the
+                # Eluat PAK15 IS decisive and must cascade to its natural
+                # F-class (no cap). When PAK16 Feststoff is BM-0, the cap
+                # applies — PAK15 Eluat alone cannot escalate the sample.
                 if 9 in fn_list and klasse in ("BM-F0*", "BM-F1", "BM-F2", "BM-F3"):
-                    klasse = "BM-F0* (Eluat cap; PAK16 Feststoff für höhere Klassen maßgeblich)"
-                    bm0_gw = item["grenzwerte"].get("BM_0*")
-                    dyn_gw = bm0_gw["klammerwert"] if isinstance(bm0_gw, dict) and toc_gehalt >= 0.5 else (bm0_gw["standard"] if isinstance(bm0_gw, dict) else bm0_gw)
-                    gw_str = f"<b>{dyn_gw}</b>"
+                    parent_param = ELUAT_FESTSTOFF_XREF.get(param, "PAK16")
+                    parent_klasse = feststoff_status.get(parent_param, "")
+                    # Cap only when parent Feststoff is BM-0 (or unknown — no
+                    # signal that Feststoff escalates). If parent is BM-F class
+                    # the Eluat cascades naturally.
+                    if parent_klasse == "BM-0" or parent_klasse in ("", "Not in EBV", "No Value"):
+                        klasse = "BM-F0* (Eluat cap; PAK16 Feststoff für höhere Klassen maßgeblich)"
+                        bm0_gw = item["grenzwerte"].get("BM_0*")
+                        dyn_gw = bm0_gw["klammerwert"] if isinstance(bm0_gw, dict) and toc_gehalt >= 0.5 else (bm0_gw["standard"] if isinstance(bm0_gw, dict) else bm0_gw)
+                        gw_str = f"<b>{dyn_gw}</b>"
 
                 if 12 in fn_list and klasse == "> BM-F3 (Landfill!)":
                     klasse = "> BM-0* (Eluat; für BM-F nur Feststoff maßgeblich)"
